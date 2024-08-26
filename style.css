@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    /* Verhindert Scrollen */
+    background-color: lightgray;
+}
+
+canvas {
+    display: block;
+    /* Sorgt dafür, dass das Canvas-Element die gesamte Breite nutzt */
+    margin: auto;
+    /* Zentriert das Canvas horizontal */
+    background-color: white;
+    /* Hintergrundfarbe des Spiels */
+}
+
+#board {
+    display: block;
+}
+
+#turnScreen {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: white;
+    font-size: 2em;
+    font-family: sans-serif;
+    text-align: center;
+    z-index: 9999;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#turnScreen p {
+    margin: 10px;
+    padding: 10px;
+}
+
+/* Media Queries für Responsivität */
+
+@media screen and (max-width: 600px) {
+    canvas {
+        display: none; /* Canvas ausblenden für Bildschirme mit max. Breite 600px */
+    }
+
+    button {
+        display: none; /* Button ausblenden für Bildschirme mit max. Breite 600px */
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    canvas {
+        display: none; /* Canvas ausblenden für Bildschirme mit Breite zwischen 601px und 1024px */
+    }
+
+    button {
+        display: none; /* Button ausblenden für Bildschirme mit Breite zwischen 601px und 1024px */
+    }
+}
